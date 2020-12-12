@@ -1,0 +1,122 @@
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,800);
+
+/*
+ *,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font: 300 1em/1.5 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  text-decoration: none;
+  color: #111;
+} */
+
+button:hover {
+  cursor: pointer
+}
+
+button {
+  background: transparent;
+  outline: none;
+  position: relative;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.39);
+  border: 0;
+  padding: 15px 50px;
+  overflow: hidden;
+  background-color: rgb(255, 208, 0);
+  width: 70%;
+  height: 100px;
+  margin-bottom: 30px;
+  font-size: x-large;
+  color: brown;
+}
+
+/*button:before (attr data-hover)*/
+button:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+button:before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 2em;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all .3s ease-in-out;
+}
+
+/*button div (button text before hover)*/
+button:hover div {
+  opacity: 0;
+  transform: translate(100%, 0)
+}
+
+button div {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  transition: all .3s ease-in-out;
+}
+
+
+.logo {
+  margin: auto;
+  max-width: 500px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+p {
+  width: 100%;
+  margin-left: 15%;
+  margin-top: 0;
+  align-content: flex-start !important;
+  align-items: flex-start !important;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 1.7em;
+}
+/* 
+.btn-con {
+  padding: 10px;
+  width: 70%;
+  height: 100px;
+  background-color: rgb(255, 208, 0);
+  font-size: x-large;
+  color: brown;
+  font-family: 'Nunito', sans-serif;
+  max-width: 768px;
+  border: 0;
+  color: var(--color);
+  transition: 0.25s;
+}
+
+.btn-emp {
+  margin-top: 30px;
+  padding: 10px;
+  width: 70%;
+  height: 100px;
+  font-size: x-large;
+  background-color: rgb(255, 208, 0);
+  color: brown;
+  font-family: 'Nunito', sans-serif;
+  max-width: 768px;
+  border: 0;
+} */
