@@ -1,11 +1,14 @@
 <div class="container">
     <h3>Agora que você está dentro dessa grande comunidade de criadores, está na hora de você dar seu primeiro passo!</h3>
-    <button data-hover="Bora inovar!" [routerLink]="['/dashboard/:id/create']">
+    <button data-hover="Bora inovar!" [routerLink]="['/dashboard/1/create']">
         <div>Crie aqui sua Cerveja</div>
     </button>
     <h3>Lembre-se uma cerveja nova pode demorar de 25 a 45 dias para ser feita</h3>
     <h3>Veja logo abaixo quais foram as cervejas criadas e se inspire com os destaques</h3>
-    <button style="background-color: white; color: black;" data-hover="Só cerveja bacana!" (click)="seeBeers()">
+    <button style="background-color: rgb(255, 208, 0); color: #FF0101;" data-hover="Minhas ideias!" [routerLink]="['/dashboard/1/monitoring']">
+        <div>Minhas Criações</div>
+    </button>
+    <button style="background-color: white; color: black;" data-hover="Só cerveja bacana!" [routerLink]="['/comunidade']">
         <div>Criações da Comunidade</div>
     </button>
     <h3>Caso queria conhecer alguns dos nossos parceiros</h3>

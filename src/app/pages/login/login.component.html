@@ -13,20 +13,27 @@
         <div class="col-6">
             <div class="loginContainer">
                 <div class="form">
-                    <h3>Bora participar dessa comunidade de criadores do futuro ?</h3>
+                    <h3 *ngIf="hasUser">Bora participar dessa comunidade de criadores do futuro ?</h3>
+                    <h3 *ngIf="!hasUser">Pronto para os desafios do seu cliente ?</h3>
                 <div class="form-group">
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" id="formGroupExampleInput" placeholder="Senha">
                     </div>
-                    <button data-hover="Bora!"><div>Entrar</div></button>
-                    <h5>Sou novo e quero participar do clube!<a [routerLink]="['/signIn']">Registrar!</a></h5>
+                    <button *ngIf="hasUser" data-hover="Bora!" [routerLink]="['/dashboard/1']"><div>Entrar</div></button>
+                    <button *ngIf="!hasUser" data-hover="Bora!" [routerLink]="['/company/1']"><div>Entrar</div></button>
+
+                    <h5 *ngIf="hasUser">Sou novo e quero participar do clube!<a [routerLink]="['/signIn/1']">Registrar!</a></h5>
+                    <h5 *ngIf="!hasUser">Sou novo e quero participar do clube!<a [routerLink]="['/signIn/2']">Registrar!</a></h5>
                 </div>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-6" *ngIf="hasUser" >
             <img class="image" src="../../../assets/img/bgLoginConsumidor.jpg" alt="">
+        </div>
+        <div class="col-6" *ngIf="!hasUser">
+            <img class="image" src="../../../assets/img/graos.jpg" alt="">
         </div>
     </div>
 </div>

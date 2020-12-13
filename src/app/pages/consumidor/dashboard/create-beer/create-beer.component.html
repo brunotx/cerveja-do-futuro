@@ -17,6 +17,7 @@
         <option value="11">Preto</option>
         <option value="12">Preto opaco</option>
     </select>
+    <h5>&nbsp;</h5>
 
     <select class="form-control" aria-label="Default select example">
         <option selected>Qual é o sabor que você deseja ?</option>
@@ -51,6 +52,15 @@
         <option value="6">Rauchbiere</option>
         <option value="6">Fruit Beer</option>
     </select>
+    <h5>&nbsp;</h5>
+
+    <select class="form-control" aria-label="Default select example">
+        <option selected>E sobre o Corpo da cerveja ?</option>
+        <option value="0">Encorpada</option>
+        <option value="1">Médio</option>
+        <option value="2">Leve</option>
+    </select>
+    <h5>Leve como uma Pilsen ou encorpada como uma IPA ?!</h5>
     <select class="form-control" aria-label="Default select example">
         <option selected>E sobre o Amargor da cerveja ?</option>
         <option value="0">0 - 15 IBU</option>
@@ -59,4 +69,8 @@
         <option value="3"> 50 > ... IBU</option>
     </select>
     <h5>Quanto menor o IBU menos amargor a cerveja terá</h5>
+
+    <button data-hover="Quase lá!" [routerLink]="['/dashboard/1/create2Step']">
+        <div>Próximo</div>
+    </button>
 </div>

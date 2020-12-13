@@ -3,12 +3,11 @@
         <div class="col-6">
             <div class="loginContainer">
                 <div class="form">
-                    <h3>Registro de Novo Usuário</h3>
+                    <h3 *ngIf="hasUser">Registro de Novo Usuário</h3>
+                    <h3 *ngIf="!hasUser">Então você quer participar desse mundo de ideias e possibilidades? <h5 style="color: rgb(255, 208, 0);">#BoraImpactar</h5></h3>
+
                     <div class="form-group">
                         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome Completo">
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Email">
@@ -16,11 +15,23 @@
                     <div class="form-group">
                         <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Repita o Email">
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Endereço">
+                    <div class="form-group" *ngIf="!hasUser">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="CNPJ">
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Cep">
+                    <div class="form-group" *ngIf="!hasUser">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Razão Social">
+                    </div>
+                    <div class="form-group" *ngIf="!hasUser">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="N° Vigilancia Sanitaria">
+                    </div>
+                    <div class="form-group" *ngIf="!hasUser">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Empresa acredita em alguma causa social? Qual?">
+                    </div>
+                    <div class="form-group" *ngIf="!hasUser">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Especialidade da Empresa">
+                    </div>
+                    <div class="form-group" *ngIf="!hasUser">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Propósito da Empresa">
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" id="formGroupExampleInput" placeholder="Senha">
@@ -28,15 +39,21 @@
                     <div class="form-group">
                         <input type="password" class="form-control" id="formGroupExampleInput" placeholder="Repita a Senha">
                     </div>
-                    <button data-hover="Bora descobrir novos sabores!" (click)="submit()">
+                    <button data-hover="Bora descobrir novos sabores!" (click)="submit(1)" *ngIf="hasUser">
+                        <div>Registrar</div>
+                    </button>
+                    <button data-hover="Bora fazer novos sabores!" (click)="submit(2)" *ngIf="!hasUser" >
                         <div>Registrar</div>
                     </button>
                     <h5>Já é registrado no clube !?<a [routerLink]="['/login']">Login</a></h5>
                 </div>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-6" *ngIf="hasUser" >
             <img class="image" src="../../../assets/img/bgLanding.jpg" alt="">
+        </div>
+        <div class="col-6" *ngIf="!hasUser" >
+            <img class="image" src="../../../assets/img/cervejaria.jpg" alt="">
         </div>
     </div>
 </div>

@@ -1,0 +1,41 @@
+<div class="container">
+    <h3>Acreditamos que cada cerveja tem história para contar e amigos para compartilhar!</h3>
+
+    <h3>Sua cerveja será avaliada por um de nossos parceiros, eles passarão o preço e a quantidade de litros.</h3>
+
+    <div class="form">
+        <select class="form-control mb-1" aria-label="Default select example">
+            <option selected>Você é alguém capaz de arcar com um orçamento para 50 litros ou mais ?</option>
+            <option value="0">Sim</option>
+            <option value="1">Não</option>
+        </select>
+
+        <h5>Se não, não tem problema, sua cerveja vai estar na aba da comunidade.</h5>
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput"
+                placeholder="Quantos litros, latas ou garrafas você quer ?">
+        </div>
+        <select class="form-control" aria-label="Default select example">
+            <option selected>Você deseja personalização feita por email ?</option>
+            <option value="0">Sim</option>
+            <option value="1">Não</option>
+        </select>
+        <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput"
+                placeholder="Qual é o nome da sua cerveja ?">
+        </div>
+    </div>
+    <button data-hover="Será um sucesso!" (click)="openModal(template)">
+        <div>Finalizar</div>
+    </button>
+</div>
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Você receberá um email com os próximos avisos!</h4>
+        <button data-hover="Bora compartilhar!" [routerLink]="['/comunidade']" (click)="modalRef.hide()">
+            <div>Ir para Comunidade</div>
+        </button>
+    </div>
+</ng-template>

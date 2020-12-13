@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -8,13 +8,23 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  public hasUser = true;
+
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.params.id;
+    if (id === '2') {
+      this.hasUser = false;
+    }
   }
 
-  submit() {
-    this.router.navigateByUrl('/dashboard/' + 1);
+  submit(value: number) {
+    if (value === 1) {
+      this.router.navigateByUrl('/dashboard/' + 1);
+    } else {
+      this.router.navigateByUrl('/company/' + 1);
+    }
   }
 
 }

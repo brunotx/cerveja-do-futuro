@@ -12,4 +12,6 @@ export class CreateBeerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  nextStep() {}
+
 }

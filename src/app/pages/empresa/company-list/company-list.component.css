@@ -1,0 +1,135 @@
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.39);
+}
+
+button {
+  background: transparent;
+  outline: none;
+  position: relative;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.39);
+  border: 0;
+  padding: 5px 20px;
+  overflow: hidden;
+  background-color: rgb(255, 208, 0);
+  width: 100%;
+  height: 40px;
+  margin-bottom: 30px;
+  font-size: x-large;
+  color: #FF0101;
+  margin-top: 30px;
+}
+
+/*button:before (attr data-hover)*/
+button:hover:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+button:before {
+  content: attr(data-hover);
+  position: absolute;
+  top: 0.3em;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all .3s ease-in-out;
+}
+
+/*button div (button text before hover)*/
+button:hover div {
+  opacity: 0;
+  transform: translate(100%, 0)
+}
+
+button div {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: .8em;
+  transition: all .3s ease-in-out;
+}
+
+.form {
+  margin-top: 30px;
+  width: 100%;
+  align-self: center;
+  color: white;
+}
+
+input {
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.39);
+  width: 100%;
+}
+
+.cervejas {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cervejas .item {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.cervejas .item img {
+  cursor: pointer;
+}
+
+.beerName {
+  background: transparent;
+  outline: none;
+  position: relative;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.39);
+  border: 0;
+  padding: 0px 20px;
+  overflow: hidden;
+  background-color: rgb(255, 208, 0);
+  width: 30%;
+  height: 40px;
+  margin-bottom: 30px;
+  font-size: x-large;
+  color: #FF0101;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.beerOpcoes {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  position: relative;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.39);
+  border: 0;
+  padding: 20px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  width: 30%;
+  height: 150px;
+  margin-bottom: 30px;
+  font-size: x-large;
+  color: #000;
+  margin-top: 30px;
+}

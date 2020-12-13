@@ -1,0 +1,40 @@
+<div class="container">
+    <h3>Estamos quase acabando! Queremos saber mais sobre você e seu propósito para fazer a cerveja com sua cara!</h3>
+    <div class="form">
+        <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Qual região do Brasil ?">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Você tem alguma alergia ?">
+        </div>
+        <select class="form-control" aria-label="Default select example">
+            <option selected>Você quer uma embalagem sustentável ?</option>
+            <option value="0">Sim</option>
+            <option value="1">Não</option>
+        </select>
+        <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput"
+                placeholder="O que é mais importante para você em uma cerveja ?">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput"
+                placeholder="Por que está contratando essa cerveja ?">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput"
+                placeholder="Por que está contratando nossos serviços ?">
+        </div>
+        <select class="form-control" aria-label="Default select example">
+            <option selected>Quer a cerveja geladinha quando chegar ?</option>
+            <option value="0">Sim</option>
+            <option value="1">Não</option>
+        </select>
+        <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput"
+                placeholder="Vai ser Lata, Vidro, 365ml ou 500ml ?">
+        </div>
+    </div>
+    <button data-hover="Estamos Terminando!" [routerLink]="['/dashboard/1/create3Step']">
+        <div>Próximo</div>
+    </button>
+</div>
