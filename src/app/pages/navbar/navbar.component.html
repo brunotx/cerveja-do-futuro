@@ -1,17 +1,17 @@
 <div class="navBar">
-    <div class="inicio">
+    <div class="inicio" [routerLink]="['/']">
         <p>Início</p>
     </div>
-    <div class="crie">
+    <div class="crie" [routerLink]="['/dashboard/:id']">
         <p>Crie aqui sua cerveja</p>
     </div>
     <div class="comunidade">
         <p>Comunidade</p>
     </div>
-    <div class="login">
+    <div class="login" [routerLink]="['/login']">
         <p>Login</p>
     </div>
-    <div class="signin">
+    <div class="signin" [routerLink]="['/signIn']">
         <p>Registre-se</p>
     </div>
 </div>
