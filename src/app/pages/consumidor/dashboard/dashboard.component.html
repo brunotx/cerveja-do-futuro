@@ -1,1 +1,16 @@
-<p>dashboard works!</p>
+<div class="container">
+    <h3>Agora que você está dentro dessa grande comunidade de criadores, está na hora de você dar seu primeiro passo!</h3>
+    <button data-hover="Bora inovar!" [routerLink]="['/dashboard/:id/create']">
+        <div>Crie aqui sua Cerveja</div>
+    </button>
+    <h3>Lembre-se uma cerveja nova pode demorar de 25 a 45 dias para ser feita</h3>
+    <h3>Veja logo abaixo quais foram as cervejas criadas e se inspire com os destaques</h3>
+    <button style="background-color: white; color: black;" data-hover="Só cerveja bacana!" (click)="seeBeers()">
+        <div>Criações da Comunidade</div>
+    </button>
+    <h3>Caso queria conhecer alguns dos nossos parceiros</h3>
+    <div class="parceiros">
+        <img src="../../../../assets/img/coloradoLogo.jpeg" alt="">
+        <img src="../../../../assets/img/walsLogo.jpeg" alt="">
+    </div>
+</div>

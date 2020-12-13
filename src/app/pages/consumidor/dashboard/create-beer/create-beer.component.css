@@ -1,0 +1,23 @@
+.container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  margin-top: 30px;
+  width: 100%;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.39);
+}
+
+option:hover,
+option:focus,
+option:active,
+option:focus {
+  color: red;
+  transition:0s;
+}
